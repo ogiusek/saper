@@ -1,0 +1,28 @@
+.menu {
+  background-color: black;
+  width: 100vw;
+  height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  button {
+    $padding: 1rem;
+    background-color: green;
+
+    color: black;
+    font-size: 1rem;
+
+    border-radius: $padding;
+    border: none;
+    padding: $padding $padding * 2;
+    margin: $padding;
+    transition: .3s;
+
+    &:hover {
+      padding: $padding * .9 $padding * 2 * .9;
+    }
+  }
+}
