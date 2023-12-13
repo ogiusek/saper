@@ -6,14 +6,19 @@
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
+    "@types/sass": "^1.45.0",
+    "node-sass": "^7.0.3",
+    "os-browserify": "^0.3.0",
+    "path": "^0.12.7",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-scripts": "5.0.1",
+    "sass": "^1.69.5",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
+    "start": "react-scripts -r ./.env start",
+    "build": "react-scripts -r ./.env build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
