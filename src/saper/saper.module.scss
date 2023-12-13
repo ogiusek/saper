@@ -1,0 +1,80 @@
+.background {
+  width: fit-content;
+  height: 100vh;
+  margin-left: auto;
+  margin-right: auto;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  user-select: none;
+
+  &,
+  * {
+    overflow: hidden;
+    // overflow-x: auto;
+  }
+
+  &::after {
+    background-color: black;
+    content: "";
+    display: block;
+    position: fixed;
+    left: 0;
+    top: 0;
+
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+  }
+}
+
+.board {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+
+.mines {
+  color: white;
+  place-self: start;
+  font-size: 3rem;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  img {
+    filter: invert(100%);
+    margin-left: .5rem;
+    height: 3rem;
+  }
+}
+
+.topIcons {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+
+  .reset:hover {
+    rotate: -360deg;
+  }
+
+  button {
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    transition: .3s;
+
+    img {
+      width: 2rem;
+      filter: invert(100%);
+    }
+  }
+
+}
