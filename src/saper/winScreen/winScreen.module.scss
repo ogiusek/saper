@@ -1,0 +1,119 @@
+.background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+
+  background-color: rgb(0, 0, 0, 0.3);
+  z-index: 0;
+}
+
+.modal {
+  position: fixed;
+  --w: 400px;
+  --h: 250px;
+  top: calc(50vh - var(--h) / 2);
+  left: calc(50vw - var(--w) / 2);
+  width: var(--w);
+  height: var(--h);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  z-index: 1;
+  background-color: rgb(0, 0, 0);
+  border-radius: 2rem;
+
+  border: 1px solid white;
+
+  p {
+    font-size: 1.5rem;
+    color: rgb(255, 255, 255, 1);
+    margin: 0;
+  }
+
+  button {
+    font-size: 2rem;
+    color: rgb(255, 255, 255, 0.99);
+    background-color: green;
+
+    margin-top: 1rem;
+    border: 2px solid rgb(255, 255, 255, 0.3);
+    border-radius: 1rem;
+    padding: 0.5rem 1rem;
+
+    transition: 1s;
+
+    &:hover {
+      scale: 1.1;
+    }
+  }
+}
+
+.form {
+  position: fixed;
+  z-index: 2;
+  --w: 200px;
+  --h: 150px;
+  top: calc(50vh - var(--h) / 2 - 1rem);
+  left: calc(50vw - var(--w) / 2 - 1rem);
+  width: var(--w);
+  height: var(--h);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  background-color: black;
+  border: 1px solid white;
+  border-radius: 1rem;
+  padding: 1rem;
+
+  input,
+  button,
+  label {
+    margin: 0;
+    padding: 0.5rem;
+    border: 0;
+    box-sizing: border-box;
+
+    width: 100%;
+    font-size: 1rem;
+    text-align: left;
+  }
+
+  label {
+    color: white;
+    text-transform: capitalize;
+    text-align: center;
+  }
+
+  button {
+    border-radius: 0 0 0.5rem 0.5rem;
+    text-align: center;
+    background-color: transparent;
+    color: white;
+    border: 1px solid lightcoral;
+    transition: 0.3s;
+
+    &.valid {
+      border: 1px solid lightgreen;
+    }
+
+    &:hover {
+      scale: 1.05;
+    }
+  }
+
+  input {
+    border-radius: 0.5rem 0.5rem 0 0;
+    margin-bottom: 0.5rem;
+    background-color: transparent;
+    border: 1px solid white;
+    color: white;
+  }
+}
